@@ -1,5 +1,5 @@
 cask "trackweight" do
-  version "1.0.1"
+  version "1.0.2"
   sha256 :no_check # built from source — checksum indeterminable ahead of build
 
   desc "Turn your MacBook's trackpad into a precise digital weighing scale"
