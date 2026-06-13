@@ -7,13 +7,8 @@ cask "trackweight" do
   desc "Turn your MacBook's trackpad into a precise digital weighing scale"
   homepage "https://github.com/krishkrosh/TrackWeight"
 
-  livecheck do
-    url :url
-    strategy :github_latest
-  end
-
   # Hardware prerequisites
-  depends_on macos: ">= :ventura" # macOS 13 or newer
+  depends_on macos: :ventura
 
   app "TrackWeight.app"
   binary "#{appdir}/TrackWeight.app/Contents/MacOS/TrackWeight", target: "trackweight"
