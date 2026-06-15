@@ -13,7 +13,7 @@ cask "trackweight" do
   end
 
   # Hardware prerequisites
-  depends_on macos: ">= :ventura" # macOS 13 or newer
+  depends_on macos: ventura # macOS 13 or newer
 
   app "TrackWeight.app"
   binary "#{appdir}/TrackWeight.app/Contents/MacOS/TrackWeight", target: "trackweight"
