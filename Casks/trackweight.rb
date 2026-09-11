@@ -18,12 +18,6 @@ cask "trackweight" do
   app "TrackWeight.app"
   binary "#{appdir}/TrackWeight.app/Contents/MacOS/TrackWeight", target: "trackweight"
 
-  # Refresh Launch Services to ensure icon appears
-  postflight_steps do
-    run "/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister",
-        args: ["-f", "{{appdir}}/TrackWeight.app"]
-  end
-
   # Clean‑up leftovers if the user later runs `brew uninstall --zap trackweight`
   zap trash: [
     "~/Library/Application Support/TrackWeight",
